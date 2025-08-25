@@ -3,9 +3,9 @@ from __future__ import annotations
 
 import streamlit as st
 
-from .db import init_db
-from .ui.layout import init_page
-from .auth import login
+from src.db import init_db
+from src.ui.layout import init_page
+from src.auth import login
 
 
 def main() -> None:

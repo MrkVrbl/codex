@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+*.pyo
+*.sqlite3
+*.db
+.streamlit/secrets.toml
+data/seed/*.xlsx

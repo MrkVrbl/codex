@@ -1,0 +1,10 @@
+streamlit
+pandas
+numpy
+openpyxl
+sqlalchemy
+plotly
+python-dateutil
+xlsxwriter
+streamlit-authenticator
+streamlit-aggrid

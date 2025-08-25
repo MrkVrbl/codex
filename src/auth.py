@@ -23,7 +23,7 @@ def login() -> tuple[stauth.Authenticate, str]:
         auth_conf.get("cookie", {}).get("expiry_days", 1),
     )
 
-    name, auth_status, username = authenticator.login("Login", "main")
+    name, auth_status, username = authenticator.login(location="main", key="Login")
 
     if not auth_status:
         st.warning("Please enter your credentials")

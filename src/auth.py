@@ -23,12 +23,13 @@ def login() -> tuple[stauth.Authenticate, str]:
         auth_conf.get("cookie", {}).get("expiry_days", 1),
     )
 
-    name, auth_status, username = authenticator.login(location="main", key="Login")
+    authenticator.login(location="main", key="Login")
 
-    if not auth_status:
+    if not st.session_state.get("authentication_status"):
         st.warning("Please enter your credentials")
         st.stop()
 
+    username = st.session_state.get("username", "")
     allowed = username in auth_conf.get("allowed_emails", [])
     if not allowed:
         st.error("Access denied")
